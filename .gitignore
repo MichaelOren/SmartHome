@@ -1,0 +1,14 @@
+.storage/
+deps/
+home-assistant_v2.db
+home-assistant.log*
+.ha_run.lock
+.HA_VERSION
+secrets.yaml
+mosquitto-data/
+zigbee2mqtt-data/
+*.pem
+*.key
+*.crt
+zigbee.db
+.DS_Store

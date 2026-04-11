@@ -1,0 +1,410 @@
+- id: '1730589115595'
+  alias: Bedroom lamps on off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 376ab3fc78ed66f97362b87332d5e50c
+    type: action
+    subtype: toggle
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 1ec562592017e26a9f654164ebedb833
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    domain: light
+  mode: single
+- id: '1731069890011'
+  alias: Bedroom lamps increase brightness
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 376ab3fc78ed66f97362b87332d5e50c
+    type: action
+    subtype: brightness_up_click
+  condition: []
+  action:
+  - device_id: 1ec562592017e26a9f654164ebedb833
+    domain: light
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    type: brightness_increase
+  mode: single
+- id: '1731069937860'
+  alias: Bedroom lamps decrease brightness
+  description: ''
+  trigger:
+  - platform: device
+    domain: mqtt
+    device_id: 376ab3fc78ed66f97362b87332d5e50c
+    type: action
+    subtype: brightness_down_click
+  condition: []
+  action:
+  - device_id: 1ec562592017e26a9f654164ebedb833
+    domain: light
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    type: brightness_decrease
+  mode: single
+- id: '1733217962919'
+  alias: Bedroom Ceiling on
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 20f4b6f36891c2132749d2f0f4f37a8b
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: 9e547a1d6a34df2f2d83db0258894931
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    domain: light
+  mode: single
+- id: '1733217999801'
+  alias: Bedroom Ceiling off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 20f4b6f36891c2132749d2f0f4f37a8b
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 9e547a1d6a34df2f2d83db0258894931
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    domain: light
+  mode: single
+- id: '1733218375641'
+  alias: Bedroom Ceiling brightness increase
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 20f4b6f36891c2132749d2f0f4f37a8b
+    type: action
+    subtype: arrow_right_click
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 9e547a1d6a34df2f2d83db0258894931
+    domain: light
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    type: brightness_increase
+  mode: single
+- id: '1733218423298'
+  alias: Bedroom Ceiling decrease brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 20f4b6f36891c2132749d2f0f4f37a8b
+    type: action
+    subtype: arrow_left_click
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 9e547a1d6a34df2f2d83db0258894931
+    domain: light
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    type: brightness_decrease
+  mode: single
+- id: '1733553342313'
+  alias: Bedroom/Bathroom on off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: dbcc75a6d1af50972c52b748b165a8b1
+    type: action
+    subtype: 1_initial_press
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 7db076381dd154e6ea9118e726cf019f
+    entity_id: 97e16af09b9c655ce3b632f1d9a9fcf5
+    domain: switch
+  mode: single
+- id: '1733641700106'
+  alias: Toggle Living Room Ceiling
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 9d28d684340872b1dd5146c8963b1dea
+    type: action
+    subtype: 1_initial_press
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: a9f9eea2040d9283fc4c35232180ef8f
+    entity_id: 355f7c949110dcb06baebd0d1265538e
+    domain: light
+  mode: single
+- id: '1733642817141'
+  alias: Hallway Toggle
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: f1a63e6dd1290f7c596c58418fad1c34
+    type: action
+    subtype: 1_initial_press
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: b675a571d8ee2e8ac05e8ee6b0c136ef
+    entity_id: 4cb8da58fdb1bcdce2eb9ef9d7a9598f
+    domain: light
+  mode: single
+- id: '1733655117647'
+  alias: Bedroom ceiling bathroom switch
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: dbcc75a6d1af50972c52b748b165a8b1
+    type: action
+    subtype: 2_initial_press
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 9e547a1d6a34df2f2d83db0258894931
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    domain: light
+  mode: single
+- id: '1736037323190'
+  alias: Bathroom Lamp Toggle switch
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 59f4544499dd4c5cfa108dce48a0fb10
+    type: action
+    subtype: single
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 7db076381dd154e6ea9118e726cf019f
+    entity_id: 97e16af09b9c655ce3b632f1d9a9fcf5
+    domain: switch
+  mode: single
+- id: '1745395415301'
+  alias: Lights off at 9:30PM
+  description: ''
+  triggers:
+  - trigger: time
+    at: '21:30:00'
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 49b29ea0b7e1977761d568cc90d1e080
+  - type: turn_off
+    device_id: a9f9eea2040d9283fc4c35232180ef8f
+    entity_id: 355f7c949110dcb06baebd0d1265538e
+    domain: light
+  - type: turn_on
+    device_id: 1ec562592017e26a9f654164ebedb833
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    domain: light
+    brightness_pct: 60
+    flash: short
+  mode: single
+- id: '1745395491701'
+  alias: Lamps on in the evening
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunset
+    offset: -01:30:00
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 1ec562592017e26a9f654164ebedb833
+      - 49b29ea0b7e1977761d568cc90d1e080
+  mode: single
+- id: '1745409132745'
+  alias: Flash at 9:15PM
+  description: ''
+  triggers:
+  - trigger: time
+    at: '21:15:00'
+  conditions: []
+  actions:
+  - device_id: 49b29ea0b7e1977761d568cc90d1e080
+    domain: light
+    entity_id: 442e44f403985d19c32ca8d40837da2d
+    type: flash
+  - device_id: 49b29ea0b7e1977761d568cc90d1e080
+    domain: light
+    entity_id: 442e44f403985d19c32ca8d40837da2d
+    type: brightness_decrease
+  mode: single
+- id: '1756121436269'
+  alias: 4-1 Bedroom lights toggle
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 1ec562592017e26a9f654164ebedb833
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    domain: light
+  mode: single
+- id: '1756121531974'
+  alias: 4-2 increase brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 2_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 9e547a1d6a34df2f2d83db0258894931
+    domain: light
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    type: brightness_increase
+  mode: single
+- id: '1756121588957'
+  alias: 4-3 Toggle bathroom
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 3_single
+    trigger: device
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: 7db076381dd154e6ea9118e726cf019f
+    entity_id: 97e16af09b9c655ce3b632f1d9a9fcf5
+    domain: switch
+  mode: single
+- id: '1756121617400'
+  alias: 4-4 ceiling decrease brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 4_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 9e547a1d6a34df2f2d83db0258894931
+    domain: light
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    type: brightness_decrease
+  mode: single
+- id: '1756121712666'
+  alias: 4-2 Bedroom ceiling on
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 2_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: 9e547a1d6a34df2f2d83db0258894931
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    domain: light
+  mode: single
+- id: '1756121751098'
+  alias: 4-4 double ceiling off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 1a2545d902841a7790ec9966447d3b26
+    type: action
+    subtype: 4_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 9e547a1d6a34df2f2d83db0258894931
+    entity_id: 1d5674ea5a169d0ba334fce0a54f7791
+    domain: light
+  mode: single
+- id: '1762038734471'
+  alias: Bec remote lamps on
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 43ebde42bc8b2e0feaf250b566e884df
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: 1ec562592017e26a9f654164ebedb833
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    domain: light
+  mode: single
+- id: '1762038769103'
+  alias: Bec remote lamps off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 43ebde42bc8b2e0feaf250b566e884df
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 1ec562592017e26a9f654164ebedb833
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    domain: light
+  mode: single
+- id: '1762038835453'
+  alias: Bec remote brightness increase
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 43ebde42bc8b2e0feaf250b566e884df
+    type: action
+    subtype: brightness_move_up
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 1ec562592017e26a9f654164ebedb833
+    domain: light
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    type: brightness_increase
+  mode: single
+- id: '1762038880585'
+  alias: Bec remote Brightness decrease
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 43ebde42bc8b2e0feaf250b566e884df
+    type: action
+    subtype: brightness_move_down
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 1ec562592017e26a9f654164ebedb833
+    domain: light
+    entity_id: d622b8359bee1dfa602ba7c89a2d2779
+    type: brightness_decrease
+  mode: single
