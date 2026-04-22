@@ -3,6 +3,8 @@ services:
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
+    labels:
+      - com.centurylinklabs.watchtower.scope=HomeLab
     volumes:
       - .:/config
       - /etc/localtime:/etc/localtime:ro
@@ -14,6 +16,8 @@ services:
   mqtt:
     image: eclipse-mosquitto:2.0
     restart: unless-stopped
+    labels:
+      - com.centurylinklabs.watchtower.scope=HomeLab
     volumes:
       - "./mosquitto-data:/mosquitto"
     ports:
@@ -25,6 +29,8 @@ services:
     container_name: zigbee2mqtt
     restart: unless-stopped
     image: koenkk/zigbee2mqtt
+    labels:
+      - com.centurylinklabs.watchtower.scope=HomeLab
     depends_on:
       - mqtt
     volumes:
@@ -38,8 +44,11 @@ services:
       - /dev/ttyACM0:/dev/ttyACM0
 
   watchtower:
-    container_name: watchtower
+    container_name: smarthome-watchtower
     image: containrrr/watchtower
+    command: --scope HomeLab --label-enable
+    labels:
+      - com.centurylinklabs.watchtower.scope=HomeLab
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     # ports:
